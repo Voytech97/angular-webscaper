@@ -1,0 +1,23 @@
+<input type="text" [(ngModel)]="url">
+<p>{{url}}</p>
+<div>
+    <h2>Zawartość HTML</h2>
+    pokazuje trzecią linię z domeny example.com
+    <div *ngFor="let line of htmlContentLines; let i=index">
+      <ng-container *ngIf="i === 3">
+        {{ line }}
+      </ng-container>
+    </div>
+  </div>
+  
+  <!-- <input type="text" [(ngModel)]="url">
+<button (click)="getHTML()">Pobierz HTML</button>
+<p>wprowadzony url {{url}}</p>
+<div>
+  <h2>Zawartość HTML</h2>
+  <div *ngFor="let line of htmlContentLines; let i=index">
+    <ng-container *ngIf="i === 3">
+      {{ line }}
+    </ng-container>
+  </div>
+</div> -->
